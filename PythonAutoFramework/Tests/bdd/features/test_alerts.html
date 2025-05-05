@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Test Alerts</title>
+  </head>
+  <body>
+    <script>
+      function showAlert() {
+        alert("This is a test alert!");
+      }
+
+      function showConfirm() {
+        var result = confirm("Do you want to proceed?");
+        if (result) {
+          alert("You clicked OK!");
+        } else {
+          alert("You clicked Cancel!");
+        }
+      }
+
+      function showPrompt() {
+        var name = prompt("Please enter your name:", "");
+        if (name != null && name != "") {
+          alert("Hello, " + name + "!");
+        } else {
+          alert("You didn't enter your name!");
+        }
+      }
+    </script>
+
+    <button onclick="showAlert()">Show Alert</button>
+    <button onclick="showConfirm()">Show Confirm</button>
+    <button onclick="showPrompt()">Show Prompt</button>
+  </body>
+</html>
